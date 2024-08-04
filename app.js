@@ -12,7 +12,7 @@ app.get("/weather", async (req, res) => {
 
 try {
 	const response = await fetch(url, options);
-	res.send({response.data});
+	res.send({response});
 } catch (error) {
 	res.status(500).send({ error: 'An error occurred while fetching the weather data' });
 }
